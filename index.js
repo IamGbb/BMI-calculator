@@ -1,11 +1,22 @@
-
 var male = false;
 var gender = false;
 
+const waiting = document.getElementById('waiting')
+const waitingMale = document.getElementById('waiting-male')
+const waitingFemale = document.getElementById('waiting-female')
+const happyMale = document.getElementById('happy-male')
+const sadMale = document.getElementById('sad-male')
+const happyFemale = document.getElementById('happy-female')
+const sadFemale = document.getElementById('sad-female')
 
-const genderFemale = () => {
 const girl = document.getElementById("girl");
 const boy = document.getElementById("boy");
+
+waitingMale.style.display = 'none';
+waitingFemale.style.display = 'none';
+
+const genderFemale = () => {
+
 male = false;
 gender = true;
 girl.style.backgroundColor = 'rgb(241, 230, 219)';
@@ -13,9 +24,6 @@ girl.style.border = '1px solid #fdad36'
 boy.style.backgroundColor = '#ffff'
 boy.style.border = 'transparent'
 
-const waiting = document.getElementById('waiting')
-const waitingMale = document.getElementById('waiting-male')
-const waitingFemale = document.getElementById('waiting-female')
 
 waiting.style.display = 'none';
 waitingMale.style.display = 'none';
@@ -23,18 +31,13 @@ waitingFemale.style.display = 'block';
 }
 
 const genderMale = () => {
-const girl = document.getElementById("girl");
-const boy = document.getElementById("boy");
+
 male = true;
 gender = true; 
 boy.style.backgroundColor = 'rgb(241, 230, 219)';
 boy.style.border = '1px solid #fdad36'
 girl.style.backgroundColor = '#ffff'
 girl.style.border = 'transparent'
-
-const waiting = document.getElementById('waiting')
-const waitingMale = document.getElementById('waiting-male')
-const waitingFemale = document.getElementById('waiting-female')
 
 waiting.style.display = 'none';
 waitingFemale.style.display = 'none';
@@ -81,13 +84,7 @@ resultContainer.style.display = 'block'
 
 
 const result = document.getElementById("bmi-result")
-const waiting = document.getElementById('waiting')
-const waitingMale = document.getElementById('waiting-male')
-const waitingFemale = document.getElementById('waiting-female')
-const happyMale = document.getElementById('happy-male')
-const sadMale = document.getElementById('sad-male')
-const happyFemale = document.getElementById('happy-female')
-const sadFemale = document.getElementById('sad-female')
+
 
 result.innerHTML = 'Your BMI is:' + bmi.toFixed(2);
 
