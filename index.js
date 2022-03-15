@@ -8,6 +8,8 @@ const happyMale = document.getElementById('happy-male')
 const sadMale = document.getElementById('sad-male')
 const happyFemale = document.getElementById('happy-female')
 const sadFemale = document.getElementById('sad-female')
+const resultContainer = document.getElementsByClassName('result-container')[0]
+const result = document.getElementById("bmi-result")
 
 const girl = document.getElementById("girl");
 const boy = document.getElementById("boy");
@@ -57,7 +59,11 @@ const heightAlert = document.getElementById("heightError");
 const weightAlert = document.getElementById("weightError");
 const genderAlert = document.getElementById("genderError");
 
- heightAlert.style.visibility = 'hidden';
+girl.disabled = true;
+boy.disabled = true;
+
+
+heightAlert.style.visibility = 'hidden';
 weightAlert.style.visibility = 'hidden';
 
 
@@ -78,12 +84,9 @@ if (weightAlert.style.visibility === 'hidden' && heightAlert.style.visibility ==
 height /= 100
 const bmi = weight / (height*height);
 
-const resultContainer = document.getElementsByClassName('result-container')[0];
+
 const meaning = document.getElementById('bmi-meaning')
 resultContainer.style.display = 'block'
-
-
-const result = document.getElementById("bmi-result")
 
 
 result.innerHTML = 'Your BMI is:' + bmi.toFixed(2);
@@ -134,5 +137,27 @@ sadFemale.style.display = 'none';
     }
 }
 }
+ }
+
+ function handleReset() {
+waiting.style.display = 'block';
+waitingFemale.style.display = 'none';
+waitingMale.style.display = 'none';
+happyMale.style.display = 'none';
+happyFemale.style.display = 'none';
+sadMale.style.display = 'none';
+sadFemale.style.display = 'none';
+girl.disabled = false;
+boy.disabled = false;
+boy.style.backgroundColor = 'white';
+boy.style.border = 'transparent';
+girl.style.backgroundColor = 'white';
+girl.style.border = 'transparent';
+resultContainer.style.display = 'none'
+const weight = document.getElementById("weight");
+weight.value = '';
+const height = document.getElementById("height");
+height.value = '';
+
  }
 
