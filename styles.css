@@ -1,0 +1,152 @@
+body {
+background-color: #f3f7ff;
+margin-right: 0;
+font-family:sans-serif
+}
+
+.calc-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 50vh;
+    margin: 25vh 0 auto 0;
+}
+
+.form-container{
+  margin-left: 20vh;
+}
+
+.img-container {
+    overflow: hidden;
+    margin-right: 0;
+}
+
+.image {
+width: 100%;
+margin: auto 0 auto 10%
+}
+
+.gender-btns {
+    margin-left: 0;
+    padding-left: 0;
+    align-items: right;
+    margin-bottom: 5vh;
+}
+
+.gender {
+    width:  12vh;
+    height: 10vh;
+    background-color: white;
+    margin: 0 10 0 0;
+    border: transparent;
+    box-shadow: 0 0 5px rgba(51, 59, 69, 0.1);
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+.gender:hover {
+    transition: 0.5s;
+    box-shadow: 0 0 20px rgba(51, 59, 69, 0.1);
+}
+
+.gender * {
+    display: flex;
+    margin: auto;
+}
+
+
+h4 {
+    margin: 1vh auto;
+}
+
+.submit {
+    display: inline-block;
+    margin: 2vh 0;
+    background-color: #fdad36;
+    margin-top: 5vh;
+    width: 10vh;
+    height: 5vh;
+    border-radius: 30px;
+    border: transparent;
+    cursor: pointer;
+}
+
+.submit:hover {
+    transition: 0.2s;
+    background-color: #a792fb4d;
+
+}
+
+input {
+    width: 26vh;
+    height: 4vh;
+    border-radius: 10px;
+    border: 2px solid #acaaaa;
+    padding: 14px;
+    margin-bottom: -20px;
+
+    
+}
+
+.parameter {
+    background-color: white;
+    width: 6vh;
+    margin-left: 12px;
+    margin-bottom: -9;
+    position: relative;
+    font-size: 12px;
+    color: #727272;
+    text-align: center;
+}
+
+#heightError {
+    font-size: 12px;
+    margin: 25px auto 30px auto;
+    color: red;
+    visibility: hidden;
+}
+
+#weightError {    
+    font-size: 12px;
+    margin: 25px auto 30px auto;
+    color: red;
+    visibility: hidden;
+}
+
+#genderError {    
+    font-size: 12px;
+    margin: 10px auto -20px auto;
+    color: red;
+    visibility: hidden;
+}
+
+.result-container{
+position: fixed;
+margin-left: 200px;
+margin-top: 30px;
+}
+
+#happy-female{
+    display: none;
+}
+
+#happy-male{
+    display: none;
+}
+
+
+#sad-female{
+    display: none;
+}
+
+#sad-male{
+    display: none;
+}
+
+#waiting {
+    display: block;
+}
+
+#heading{
+    color: #A691FB;
+    font-size: 50px;
+}

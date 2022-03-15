@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            /* Chrome, Safari, Edge, Opera */
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        
+            /* Firefox */
+            input[type=number] {
+                -moz-appearance: textfield;
+            }
+        </style>
+    </head>
+    <body>
+            <container class="calc-container">
+                <div class="form-container">
+                    <h1 id="heading">BMI Calculator</h1>
+                    
+                        <div class="gender-btns">
+                            <h4>Gender</h4>
+                            <button class="gender" id="girl" onClick= genderFemale()><img src="images/girl.svg">Female</img></button>
+                            <button class="gender" id="boy" onClick= genderMale()><img src="images/boy.svg">Male</img></button>
+                            <p class="error" id="genderError">Pick your gender</p>
+                        </div>
+                        <p class="parameter">Height</p>
+                        <input type="number" id="height" min="120" max="240">
+                        <p class="error" id="heightError">Pick a number between 120 - 240</p>
+                        <p class="parameter">Weight</p>
+                        <input type="number" id="weight" min="40" max="200">
+                        <p class="error" id="weightError">Pick a number between 40 - 200</p>
+                
+                        <button class="submit" onClick=handleForm()>Submit</button>
+                    
+
+                </div>
+                </div>
+                <div class="img-container">
+                    <div class="result-container">
+                        <h1 id="bmi-result"></h1>
+                        <p id="bmi-meaning"></p>
+                    </div>
+                        <lottie-player class="image" id="waiting" src="images/waiting2.json" background="transparent" speed="1"
+                            style="width: 1100hv; height: 600hv;" loop  autoplay></lottie-player>
+                        
+                        <lottie-player class="image" id="waiting-male" src="images/waiting-male.json" background="transparent" speed="1"
+                            style="width: 1100hv; height: 600hv;" loop autoplay></lottie-player>                        
+                        <lottie-player class="image" id="waiting-female" src="images/waiting-female.json" background="transparent" speed="1"
+                            style="width: 1100hv; height: 600hv;" loop autoplay></lottie-player>
+
+                        <lottie-player class="image" id="happy-male" src="images/happy-male.json" background="transparent" speed="1"
+                            style="width: 1100hv; height: 600hv;" loop autoplay></lottie-player>
+                        <lottie-player class="image" id="happy-female" src="images/happy-female.json" background="transparent" speed="1"
+                            style="width: 1100hv; height: 600hv;" loop autoplay></lottie-player>
+
+                        <lottie-player class="image" id="sad-male" src="images/sad-male.json" background="transparent" speed="1"
+                            style="width: 1100hv; height: 600hv;" loop autoplay></lottie-player>
+                        <lottie-player class="image" id="sad-female" src="images/sad-female.json" background="transparent" speed="1"
+                            style="width: 1100hv; height: 600hv;" loop autoplay></lottie-player>
+                            
+
+                </div>
+            </container>
+
+            <script src="index.js" charset="utf-8"></script>
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+       
+
+    </body>
+</html>
